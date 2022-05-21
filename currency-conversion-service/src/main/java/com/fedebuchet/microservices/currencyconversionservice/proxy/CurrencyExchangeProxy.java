@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.fedebuchet.microservices.currencyconversionservice.entity.CurrencyConversion;
 
 //Nombre del servicio y ruta del mismo al que queremos llamar
-@FeignClient(name="currency-exchange",url = "localhost:8010")
+@FeignClient(name="currency-exchange")
 public interface CurrencyExchangeProxy {
 
-	@GetMapping(value="/currency-exchange/from{from}/USD/to/{to}")
+	@GetMapping(value="/currency-exchange/from/{from}/to/{to}")
 	public CurrencyConversion retrieveExchangeValue
 	(@PathVariable(value="from")String from,
 	@PathVariable(value="to")String to);

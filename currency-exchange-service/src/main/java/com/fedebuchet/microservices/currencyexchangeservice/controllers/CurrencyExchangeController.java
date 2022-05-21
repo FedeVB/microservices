@@ -13,7 +13,7 @@ import com.fedebuchet.microservices.currencyexchangeservice.entity.CurrencyExcha
 @RestController
 public class CurrencyExchangeController {
 
-	@GetMapping(value="/currency-exchange/from{from}/USD/to/{to}")
+	@GetMapping(value="/currency-exchange/from/{from}/to/{to}")
 	public ResponseEntity<?> retrieveExchangeValue(@PathVariable(value="from")String from,@PathVariable(value="to")String to){
 		return new ResponseEntity<>(new CurrencyExchange(1000L,from,to,BigDecimal.valueOf(50)),HttpStatus.OK);
 	}
