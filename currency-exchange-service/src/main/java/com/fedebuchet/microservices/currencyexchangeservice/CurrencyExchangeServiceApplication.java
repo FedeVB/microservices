@@ -24,7 +24,7 @@ public class CurrencyExchangeServiceApplication implements CommandLineRunner{
 //		currencyExchangeRepository.save(new CurrencyExchange(1001L,"USD","INR",new BigDecimal(65)));
 //		currencyExchangeRepository.save(new CurrencyExchange(1002L,"EUR","INR",new BigDecimal(75)));
 //		currencyExchangeRepository.save(new CurrencyExchange(1003L,"AUD","INR",new BigDecimal(25)));
-		currencyExchangeRepository.findAll().forEach(c-> System.out.println(c.getId()));
+//		currencyExchangeRepository.findAll().forEach(c-> System.out.println(c.getId()));
 	}
 
 }
